@@ -1,4 +1,4 @@
-# Better Difficulties
+# Advanced Difficulties
 
 ![Icon](assets/icon.png)
 
