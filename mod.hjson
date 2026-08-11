@@ -1,0 +1,19 @@
+{
+  main: "advdiff.AdvancedDifficulties"
+  name: "advdiff"
+  displayName: "[accent]Advanced Difficulties"
+  subtitle: "Prepare Thyself."
+  description:
+  '''
+A mod that overhauls the difficulty selection mechanic with better visuals, more flexible and new unique settings.
+  '''
+  author:
+  '''
+ [#ff8b00[]]BlazingGear[]
+  '''
+  version: "1.0"
+  minGameVersion: 159
+  repo: "JustTheBlazingGear/AdvancedDifficulties"
+  hidden: false
+  java: true
+}
