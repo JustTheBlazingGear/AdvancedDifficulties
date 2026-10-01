@@ -1,0 +1,21 @@
+{
+  main: "advdiff.AdvancedDifficulties"
+  name: "advdiff"
+  displayName: "[#ffd37f[]]Advanced Difficulties[]"
+  subtitle: "Prepare Thyself!!!"
+  description:
+  '''
+A mod that overhauls the difficulty selection mechanic with better visuals, more flexible and new unique settings.
+
+Thanks to lu69159/MoreCustomSettings for the modifiers that persist for each planet and some other code.
+  '''
+  author:
+  '''
+ [#ffb876[]]BlazingGear[]
+  '''
+  version: "1.0"
+  minGameVersion: 159
+  repo: "JustTheBlazingGear/AdvancedDifficulties"
+  hidden: false
+  java: true
+}
