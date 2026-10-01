@@ -1,6 +1,6 @@
 # Advanced Difficulties
 
-![Icon](assets/icon.png)
+![Icon](assets/icon.png2)
 
 A mod that overhauls the difficulty selection mechanic with better visuals, more flexible and new unique settings.
 
