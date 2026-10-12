@@ -2,9 +2,11 @@ package advdiff;
 
 import advdiff.content.AdvDiffStatusEffects;
 import arc.Events;
+import arc.math.Mathf;
 import arc.util.Log;
 import arc.util.Time;
 import mindustry.Vars;
+import mindustry.content.StatusEffects;
 import mindustry.game.*;
 import mindustry.gen.Groups;
 import mindustry.gen.Unit;
@@ -15,6 +17,7 @@ import static advdiff.content.AdvDiffUnitTypes.*;
 import static arc.math.Mathf.rand;
 import static arc.math.Mathf.random;
 import static mindustry.Vars.spawner;
+import static mindustry.Vars.state;
 import static mindustry.content.UnitTypes.*;
 
 public class AdvDiffCampaignRules extends CampaignRules {
@@ -201,7 +204,9 @@ public class AdvDiffCampaignRules extends CampaignRules {
         rules.deconstructRefundMultiplier = deconstructRefundMultiplier / 100;
 
         rules.spawns.each((s) -> {
-            s.unitAmount *= (int) (enemySpawnMultiplier / 100f);
+            s.unitAmount = Math.max(1, s.effect == StatusEffects.boss ?
+                    (int)(s.unitAmount * enemySpawnMultiplier / 100f) :
+                    Mathf.round(s.unitAmount * enemySpawnMultiplier / 100f));
             s.unitScaling *= enemySpawnMultiplier / 100f;
             s.max *= (int) (enemySpawnMultiplier / 100f);
         });
@@ -331,7 +336,7 @@ public class AdvDiffCampaignRules extends CampaignRules {
                 //Log.info("Yo sum shit spawned");
                 if (e.unit.team == Vars.state.rules.waveTeam) {
                     //Suffering was unnecessary and all I needed was 1 frame delay
-                    Time.run(0.001f, () -> {
+                    Time.run(0.00001f, () -> {
                         if (shieldsToRadiance || tierIncrease > 0) {
                             //Log.info("Radihhiance");
                             int extraRadiance = 0;

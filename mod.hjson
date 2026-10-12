@@ -13,7 +13,7 @@ Thanks to lu69159/MoreCustomSettings for the modifiers that persist for each pla
   '''
  [#ffb876[]]BlazingGear[]
   '''
-  version: "1.0"
+  version: "1.0.1"
   minGameVersion: 159
   repo: "JustTheBlazingGear/AdvancedDifficulties"
   hidden: false

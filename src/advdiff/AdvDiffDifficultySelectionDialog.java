@@ -5,14 +5,11 @@ import arc.Core;
 import arc.Events;
 import arc.func.*;
 import arc.scene.event.Touchable;
-import arc.scene.style.Drawable;
 import arc.scene.style.TextureRegionDrawable;
 import arc.scene.ui.ButtonGroup;
 import arc.scene.ui.layout.Table;
-import arc.util.Time;
 import mindustry.Vars;
 import mindustry.content.Planets;
-import mindustry.core.GameState;
 import mindustry.game.*;
 import mindustry.gen.Call;
 import mindustry.gen.Icon;
@@ -21,9 +18,7 @@ import mindustry.type.Planet;
 import mindustry.ui.dialogs.CampaignRulesDialog;
 
 import static advdiff.AdvancedDifficulties.rulesMap;
-import static arc.Core.settings;
 import static mindustry.Vars.mobile;
-import static mindustry.Vars.ui;
 
 public class AdvDiffDifficultySelectionDialog extends CampaignRulesDialog {
     Planet planet;
@@ -68,7 +63,7 @@ public class AdvDiffDifficultySelectionDialog extends CampaignRulesDialog {
     }
     public void show(Planet planet) {
         this.planet = planet;
-        //planet.campaignRules.difficulty = Difficulty.normal;
+        planet.campaignRules.difficulty = Difficulty.normal;
         customRule = rulesMap.get(planet);
         rebuild();
         show();
